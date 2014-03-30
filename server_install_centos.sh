@@ -22,7 +22,7 @@ cd redis-2.6.0-rc5
 sudo make
 sudo mkdir /etc/redis /var/lib/redis
 sudo cp src/redis-server src/redis-cli /usr/local/bin
-sudo sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
+sudo sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 0.0.0.0/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
 wget https://raw.github.com/saxenap/install-redis-amazon-linux-centos/master/redis-server
 sudo mv redis-server /etc/init.d
 sudo chmod 755 /etc/init.d/redis-server

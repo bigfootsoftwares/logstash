@@ -1,7 +1,7 @@
 #download tar with all inside it
 wget http://162.219.5.213/logstash_server.tar.gz
 tar -xvf logstash_server.tar.gz
-cd logstash-server
+cd logstash_server
 #installing apache2
 sudo yum -y install httpd
 #installing java and supplying yes to every question
